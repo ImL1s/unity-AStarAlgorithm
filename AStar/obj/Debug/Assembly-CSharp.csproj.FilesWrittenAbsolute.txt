@@ -1,0 +1,17 @@
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/obj/Debug/Assembly-CSharp.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/UnityEngine.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/UnityEditor.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/Mono.Cecil.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/Unity.DataContract.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/iml1s-macpro/Project/Unity/Learn/AStar/Temp/bin/Debug/Mono.Cecil.Mdb.dll
