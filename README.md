@@ -13,12 +13,57 @@
 
 A* 是一種啟發式搜尋演算法，結合了 Dijkstra 演算法（考量起點距離）與 最佳優先搜尋 (Best-First Search，考量終點距離）的優點。
 
+### 📊 邏輯流程圖 (Logic Flowchart)
+
+```mermaid
+graph TD
+    Start((開始)) --> Init[初始化 Open/Closed Set]
+    Init --> AddStart[將起點加入 Open Set]
+    AddStart --> CheckOpen{Open Set 為空?}
+    
+    CheckOpen -- 是 --> NoPath(無路徑可達)
+    CheckOpen -- 否 --> FindLowestF[尋找 Open Set 中 F 值最小的節點]
+    
+    FindLowestF --> IsTarget{是終點?}
+    IsTarget -- 是 --> Retrace[回溯路徑 Parent] --> End((結束))
+    IsTarget -- 否 --> MoveClosed[移至 Closed Set] --> GetNeighbors[取得所有鄰居]
+    
+    GetNeighbors --> CheckNeighbor{檢查鄰居狀態}
+    CheckNeighbor -- "不可走 / 已在 Closed" --> NextNeighbor[下一個鄰居]
+    CheckNeighbor -- "可走 & 未探索" --> CalcCost[計算 G, H, F]
+    
+    CalcCost --> BetterPath{路徑更佳?}
+    BetterPath -- 否 --> NextNeighbor
+    BetterPath -- 是 --> UpdateNode[更新 G, H, F 與 Parent] --> AddToOpen[加入/更新 Open Set] --> NextNeighbor
+    
+    NextNeighbor --> AllChecked{所有鄰居檢查完?}
+    AllChecked -- 否 --> CheckNeighbor
+    AllChecked -- 是 --> CheckOpen
+```
+
 ### 核心計算公式
 $$F = G + H$$
 
 - **G Cost (Path Cost)**: 從**起點**到當前節點的實際移動代價。
-- **H Cost (Heuristic)**: 從當前節點到**終點**的估計移動代價。在此專案中，我們計算相鄰節點的距離：直線移動代價為 10，對角線移動代價為 14（約為 $10 \sqrt{2}$）。
+- **H Cost (Heuristic)**: 從當前節點到**終點**的估計移動代價。
 - **F Cost**: 總評價分數。A* 每次都會優先探索 F 值最小的節點。
+
+### 📐 移動代價示意 (Movement Cost)
+
+為了節省浮點數運算，我們通常將標準單位 1 放大為 10：
+- **水平/垂直移動**: 代價 = 10
+- **對角線移動**: 代價 = 14 ($\approx 10 \times \sqrt{2} \approx 14.14$)
+
+```text
++------+------+------+
+|  14  |  10  |  14  |
++------+------+------+
+|  10  |  S   |  10  |
++------+------+------+
+|  14  |  10  |  14  |
++------+------+------+
+   S = 當前節點 (Source)
+```
 
 ### 執行步驟
 1. **初始化**:
