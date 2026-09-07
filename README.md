@@ -113,6 +113,12 @@ $$F = G + H$$
 - **H Cost (Heuristic)**: 從當前節點到終點的預估距離（通常使用曼哈頓距離或歐基里德距離）。
 - **F Cost**: 總代價，路徑選擇時優先考慮 F 值最低的節點。
 
+---
+
+## 支持
+
+如果這個專案幫你省了點時間，可以[請我喝杯咖啡](https://buymeacoffee.com/iml1s)。
+
 ## 📝 License
 
 此專案採用 MIT License。
